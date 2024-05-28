@@ -17,7 +17,7 @@ const db = new sqlite3.Database(dbPath);
 
 // Middleware pour autoriser toutes les origines (attention en production)
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://mael-garnier.fr');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
