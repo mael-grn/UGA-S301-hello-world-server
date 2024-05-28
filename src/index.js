@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const dbPath = './data.db'; 
+const dbPath = '../data.db'; 
 const saltRounds = 10;
 
 
