@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express');
 const app = express();
 const sqlite3 = require('sqlite3').verbose();
@@ -9,7 +11,7 @@ const jwt = require('jsonwebtoken');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const dbPath = '/vercel/path/data.db'; 
+const dbPath = path.join(process.cwd(), 'data.db');
 const saltRounds = 10;
 
 
