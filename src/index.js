@@ -38,7 +38,11 @@ db.serialize(() => {
   db.run("CREATE TABLE IF NOT EXISTS squisine (login TEXT PRIMARY KEY, etat TEXT, tour TEXT, groupeId TEXT, coequipier TEXT, FOREIGN KEY (groupeId) REFERENCES groupe(id))");
 });
 
+app.get('/', (req, res) => {
 
+  return res.status(200).json({ message: 'Welcome !' });
+  
+});
 
 // Utilisation du middleware dans une route protégée
 app.get('/checkToken', (req, res) => {
